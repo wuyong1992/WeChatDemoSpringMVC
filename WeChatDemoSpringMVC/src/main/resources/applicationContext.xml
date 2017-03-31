@@ -37,6 +37,9 @@
         <property name="wxMpConfigStorage" ref="wxMpConfigStorage"></property>
     </bean>
 
-
+    <!--配置单例的消息路由器-->
+    <!--<bean name="newRouter" class="me.chanjar.weixin.mp.api.WxMpMessageRouter">-->
+        <!--<property name=""-->
+    <!--</bean>-->
 
 </beans>

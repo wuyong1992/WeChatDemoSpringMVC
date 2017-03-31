@@ -15,9 +15,33 @@
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/idnex.css">
+    <%--<link rel="stylesheet" href="http://yanmai.wechat.com.ngrok.cc/css/idnex.css">--%>
     <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <style>
+        /*
+            内容1定位
+        */
+        .cont01 {
+            position: relative;
+        }
+
+        .imgText {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .cont02_1 {
+            width: 80%;
+            float: left;
+        }
+
+        .cont02_2 {
+            width: 20%;
+            float: right;
+        }
+    </style>
 </head>
 <body>
 <body>
@@ -25,7 +49,8 @@
 
     <%--页面头信息--%>
     <div data-role="header">
-        <img src="images/banner_01.jpg" width="100%">
+        <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+             width="100%">
     </div>
 
     <div data-role="navbar">
@@ -42,44 +67,48 @@
 
         <div class="cont01">
             <span>肤白貌美与高双商真的可以同时存在！</span>
-            <img src="images/banner_01.jpg" width="100%">
+            <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                 width="100%">
             <span class="imgText">肤白貌美与高双商真的可以同时存在！</span>
         </div>
 
         <hr>
 
-        <div >
+        <div>
             <div class="cont02_1">
                 <span>“中国经济膨胀税”该收场了</span>
             </div>
             <div class="cont02_2">
-                <img src="images/banner_01.jpg" width="100%">
+                <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                     width="100%">
             </div>
         </div>
 
         <div style="clear: both"></div>
         <hr>
 
-        <div >
+        <div>
             <div class="cont02_1">
                 <span>陈锡文：农村宅基地房不能入市买卖</span>
 
             </div>
             <div class="cont02_2">
-                <img src="images/banner_01.jpg" width="100%">
+                <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                     width="100%">
             </div>
         </div>
 
         <div style="clear: both"></div>
         <hr>
 
-        <div >
+        <div>
             <div class="cont02_1">
                 <span>这些指标预示美联储本月铁定要行动</span>
 
             </div>
             <div class="cont02_2">
-                <img src="images/banner_01.jpg" width="100%">
+                <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                     width="100%">
             </div>
         </div>
 
@@ -90,25 +119,29 @@
             <p>太惊讶了！梳手心十分钟，能防脑中风</p>
             <div class="ui-grid-b">
                 <div class="ui-block-a" style="text-align: center">
-                    <img src="images/banner_01.jpg" width="90%">
+                    <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                         width="90%">
                 </div>
                 <div class="ui-block-b" style="text-align: center">
-                    <img src="images/banner_01.jpg" width="90%">
+                    <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                         width="90%">
                 </div>
                 <div class="ui-block-c" style="text-align: center">
-                    <img src="images/banner_01.jpg" width="90%">
+                    <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                         width="90%">
                 </div>
             </div>
         </div>
 
         <hr>
 
-        <div >
+        <div>
             <div class="cont02_1">
                 <span>晚年不想有病，知道这22集就够了</span>
             </div>
             <div class="cont02_2">
-                <img src="images/banner_01.jpg" width="100%">
+                <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                     width="100%">
             </div>
         </div>
 
@@ -117,7 +150,8 @@
 
         <div class="cont01">
             <span>不布置萨德，美国就要制裁威胁韩国</span>
-            <img src="images/banner_01.jpg" width="100%">
+            <img src="http://mmbiz.qpic.cn/mmbiz_jpg/eVMyrOflUZBvehYlnPrZhFAEzzN5NBadVXeo41RRYib2K3OgJmmhsb4iaR94rwzfCkpmY3nhicdYBGsYGedVwyolw/0?wx_fmt=jpeg"
+                 width="100%">
         </div>
 
 

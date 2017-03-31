@@ -14,14 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Created by FirenzesEagle on 2016/5/30 0030.
- * Email:liumingbo2008@gmail.com
- */
+
 @Controller
 public class CoreController extends GenericController {
 
@@ -44,8 +42,9 @@ public class CoreController extends GenericController {
      * @param response
      * @throws Exception
      */
+    @ResponseBody
     @RequestMapping(value = "core")
-    public void wechatCore(HttpServletRequest request, HttpServletResponse response) throws Exception {
+    public String wechatCore(HttpServletRequest request, HttpServletResponse response) throws Exception {
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
 
@@ -55,18 +54,18 @@ public class CoreController extends GenericController {
 
         if (!this.wxMpService.checkSignature(timestamp, nonce, signature)) {
             // 消息签名不正确，说明不是公众平台发过来的消息
-            response.getWriter().println("非法请求");
-            return;
+
+            return "非法请求";
         }
 
         String echoStr = request.getParameter("echostr");
         if (StringUtils.isNotBlank(echoStr)) {
             // 说明是一个仅仅用来验证的请求，回显echostr
             String echoStrOut = String.copyValueOf(echoStr.toCharArray());
-            response.getWriter().println(echoStrOut);
-            return;
+            return echoStrOut;
         }
 
+        //如果传递的参数没有encrypt_type这个值，说明是明文传输
         String encryptType = StringUtils.isBlank(request.getParameter("encrypt_type"))
             ? "raw"
             : request.getParameter("encrypt_type");
@@ -75,8 +74,7 @@ public class CoreController extends GenericController {
             // 明文传输的消息
             WxMpXmlMessage inMessage = WxMpXmlMessage.fromXml(request.getInputStream());
             WxMpXmlOutMessage outMessage = this.coreService.route(inMessage);
-            response.getWriter().write(outMessage.toXml());
-            return;
+            return outMessage.toXml();
         }
 
         if ("aes".equals(encryptType)) {
@@ -88,14 +86,28 @@ public class CoreController extends GenericController {
             this.logger.debug("\n消息解密后内容为：\n{} ", inMessage.toString());
             WxMpXmlOutMessage outMessage = this.coreService.route(inMessage);
             this.logger.info(response.toString());
-            response.getWriter()
-                .write(outMessage.toEncryptedXml(this.configStorage));
-            return;
+
+            return outMessage.toEncryptedXml(this.configStorage);
         }
 
         response.getWriter().println("不可识别的加密类型");
-        return;
+        return "不可识别的加密类型";
     }
+
+    @RequestMapping(value = "myMiniWeb")
+    public String goMyMiniWeb(){
+
+        System.out.println("正在访问");
+        return "myMiniWeb";
+    }
+
+
+
+
+
+
+
+
 
     /**
      * 通过openid获得基本用户信息
