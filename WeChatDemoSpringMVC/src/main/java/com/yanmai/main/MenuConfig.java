@@ -3,7 +3,9 @@ package com.yanmai.main;
 import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.bean.menu.WxMenu;
 import me.chanjar.weixin.common.bean.menu.WxMenuButton;
+import me.chanjar.weixin.common.exception.WxErrorException;
 import me.chanjar.weixin.mp.api.WxMpService;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -23,10 +25,10 @@ public class MenuConfig {
     private WxMpService wxMpService;
 
     //运行该单元测试，可以建立菜单
-    /*@Test
+    @Test
     public void menuSetUp() throws WxErrorException {
         wxMpService.getMenuService().menuCreate(creatMenu());
-    }*/
+    }
 
 
     public WxMenu creatMenu (){
