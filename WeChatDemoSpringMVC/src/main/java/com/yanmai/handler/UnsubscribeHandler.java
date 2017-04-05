@@ -47,7 +47,7 @@ public class UnsubscribeHandler extends AbstractHandler {
                 .build();
 
         //日志记录
-        //TODO 用户名获取出现问题
+        //由于用户取消关注，返回的json数据中没有用户昵称
         logger.info("用户openid为："+openid+"在"+formatCreateTime+"时间点取消关注");
 
         return m;

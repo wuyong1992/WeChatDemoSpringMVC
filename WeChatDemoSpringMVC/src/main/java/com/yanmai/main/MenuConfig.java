@@ -35,7 +35,7 @@ public class MenuConfig {
         WxMenuButton wxMenuButton1 = new WxMenuButton();
         wxMenuButton1.setName("我的微站");
         wxMenuButton1.setType(WxConsts.BUTTON_VIEW);
-        wxMenuButton1.setUrl("http://yanmai.wechat.com.ngrok.cc/myMiniWeb");
+        wxMenuButton1.setUrl("http://yanmai.wechat.com.ngrok.cc/main");
 
         //第二个菜单
         WxMenuButton wxMenuButton2 = new WxMenuButton();
@@ -55,7 +55,7 @@ public class MenuConfig {
         WxMenuButton wxMenuButton3_2 = new WxMenuButton();
         wxMenuButton3_2.setName("个人中心");
         wxMenuButton3_2.setType(WxConsts.BUTTON_VIEW);
-        wxMenuButton3_2.setUrl("https://www.baidu.com/");
+        wxMenuButton3_2.setUrl("http://yanmai.wechat.com.ngrok.cc/userInfo");
         WxMenuButton wxMenuButton3_3 = new WxMenuButton();
         wxMenuButton3_3.setName("我的订单");
         wxMenuButton3_3.setType(WxConsts.BUTTON_VIEW);

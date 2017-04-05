@@ -24,11 +24,11 @@ import javax.servlet.http.HttpServletResponse;
 public class CoreController extends GenericController {
 
     @Autowired
-    protected WxMpConfigStorage configStorage;
+    private WxMpConfigStorage configStorage;
     @Autowired
-    protected WxMpService wxMpService;
+    private WxMpService wxMpService;
     @Autowired
-    protected CoreService coreService;
+    private CoreService coreService;
 
     @RequestMapping(value = "index")
     public String index() {
@@ -186,5 +186,7 @@ public class CoreController extends GenericController {
             this.logger.error(e.getError().toString());
         }
     }
+
+
 
 }

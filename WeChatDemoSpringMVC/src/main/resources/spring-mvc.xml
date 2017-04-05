@@ -29,6 +29,9 @@
         </property>
     </bean>
 
+    <!--设置不拦截静态资源-->
+    <mvc:default-servlet-handler/>
+
     <!-- 会自动注册DefaultAnnotationHandlerMapping与AnnotationMethodHandlerAdapter 两个bean,是spring MVC为@Controllers分发请求所必须的 -->
     <mvc:annotation-driven/>
 
